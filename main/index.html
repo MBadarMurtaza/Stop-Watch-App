@@ -6,26 +6,36 @@
     <link rel="stylesheet" href="/src/output.css" />
     <title>Stop Watch</title>
   </head>
-  <body class="bg-[#39005f]">
+  <body
+    class="bg-gradient-to-r from-gray-900 via-gray-800 to-black min-h-screen flex items-center justify-center"
+  >
     <div
-      class="w-[90%] max-w-[600px] bg-[#333] text-center p-[40px_0] text-[#fff] mx-auto mt-[200px] mb-0 shadow-[0_10px_10px_rba(0,0,0,0.8)]"
+      class="w-[90%] max-w-[600px] bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl text-center p-10 text-white shadow-xl"
     >
-      <h1 id="displayTime" class="mt[60px] text-[64px] font-[300]">00:00:00</h1>
-      <div class="flex items-center justify-center">
+      <h1
+        id="displayTime"
+        class="text-[64px] font-light tracking-widest drop-shadow-md"
+      >
+        00:00:00
+      </h1>
+      <div class="flex items-center justify-center gap-6 mt-6">
         <img
-          class="w-[50px] cursor-pointer m-[0_20px]"
+          onclick="watchStop()"
+          class="w-[60px] cursor-pointer hover:scale-110 transition-all duration-300"
           src="/images/stop.png"
-          alt=""
+          alt="Stop"
         />
         <img
-          class="w-[80px] cursor-pointer m-[0_20px]"
+          class="w-[80px] cursor-pointer hover:scale-110 transition-all duration-300"
           src="/images/start.png"
-          alt=""
+          alt="Start"
+          onclick="watchStarter()"
         />
         <img
-          class="w-[50px] cursor-pointer m-[0_20px]"
+          onclick="watchReset()"
+          class="w-[60px] cursor-pointer hover:scale-110 transition-all duration-300"
           src="/images/reset.png"
-          alt=""
+          alt="Reset"
         />
       </div>
     </div>
